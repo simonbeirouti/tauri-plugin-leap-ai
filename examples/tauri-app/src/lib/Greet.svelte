@@ -10,13 +10,27 @@
   }
 </script>
 
-<div>
-  <div class="row">
+<div class="greet">
+  <div class="greet-row">
     <input id="greet-input" placeholder="Enter a name..." bind:value={name} />
-    <button onclick={greet}>
-      Greet
-    </button>
+    <button onclick={greet}>Greet</button>
   </div>
   <p>{greetMsg}</p>
 </div>
 
+<style>
+  .greet-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  #greet-input {
+    min-width: min(300px, 100%);
+  }
+
+  p {
+    margin: 8px 0 0;
+    color: #d0daf9;
+  }
+</style>

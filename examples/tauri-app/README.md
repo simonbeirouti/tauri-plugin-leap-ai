@@ -1,8 +1,22 @@
-# Svelte + Vite
+# LEAP Plugin Test App
 
-This template should help get you started developing with Tauri and Svelte in Vite.
+This app is the physical test harness for `tauri-plugin-leap-ai`.
 
-## Recommended IDE Setup
+## Smoke Test
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer).
+From repository root:
 
+```bash
+pnpm --dir examples/tauri-app smoke
+```
+
+This validates:
+- download
+- restart
+- load cached model
+- generate
+
+Notes:
+- On Android/iOS, generation should stream chunks.
+- On desktop, generation should stream chunks via embedded `llama.cpp` when a valid GGUF model is loaded.
+- Desktop embedded runtime requires `cmake` installed locally.

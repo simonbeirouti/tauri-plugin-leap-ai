@@ -18,6 +18,8 @@
   ],
   "scripts": {
     "build": "rollup -c",
+    "test": "node --test guest-js/contract.test.mjs",
+    "test:vitest": "vitest run",
     "prepublishOnly": "pnpm build",
     "pretest": "pnpm build"
   },
@@ -27,6 +29,7 @@
   "devDependencies": {
     "@rollup/plugin-typescript": "^12.0.0",
     "rollup": "^4.9.6",
+    "vitest": "^2.1.9",
     "typescript": "^5.3.3",
     "tslib": "^2.6.2"
   }

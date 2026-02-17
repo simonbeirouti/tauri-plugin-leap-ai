@@ -15,9 +15,16 @@ crate-type = ["staticlib", "cdylib", "rlib"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [build-dependencies]
-tauri-build = { version = "2.5.4", default-features = false }
+tauri-build = { version = "2.5.4", default-features = false , features = [] }
 
 [dependencies]
-tauri = { version = "2.10.0" }
+tauri = { version = "2.10.0", features = [] }
+
+[target.'cfg(not(any(target_os = "android", target_os = "ios")))'.dependencies]
+tauri-plugin-leap-ai = { path = "../../../", features = ["desktop-embedded-llama"] }
+
+[target.'cfg(any(target_os = "android", target_os = "ios"))'.dependencies]
 tauri-plugin-leap-ai = { path = "../../../" }
 
+[patch.crates-io]
+swift-rs = { path = "../../../vendor/swift-rs" }

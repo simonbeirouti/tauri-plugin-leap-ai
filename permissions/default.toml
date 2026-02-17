@@ -1,3 +1,18 @@
 [default]
 description = "Default permissions for the plugin"
-permissions = ["allow-ping"]
+permissions = [
+  "allow-register-listener",
+  "allow-remove-listener",
+  "allow-download-model",
+  "allow-load-model",
+  "allow-load-cached-model",
+  "allow-list-cached-models",
+  "allow-remove-cached-model",
+  "allow-unload-model",
+  "allow-create-conversation",
+  "allow-create-conversation-from-history",
+  "allow-generate",
+  "allow-stop-generation",
+  "allow-export-conversation",
+  "allow-runtime-info",
+]

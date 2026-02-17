@@ -1,8 +1,9 @@
 import XCTest
-@testable import ExamplePlugin
+@testable import tauri_plugin_leap_ai
 
 final class ExamplePluginTests: XCTestCase {
-    func testExample() throws {
+    func testPluginConstructs() throws {
         let plugin = ExamplePlugin()
+        XCTAssertNotNil(plugin)
     }
 }

@@ -1,4 +1,4 @@
-package com.plugin.leap-ai
+package com.plugin.leap_ai
 
 import android.util.Log
 

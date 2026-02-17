@@ -295,22 +295,178 @@
       "type": "string",
       "oneOf": [
         {
-          "description": "Enables the ping command without any pre-configured scope.",
+          "description": "Enables the create_conversation command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-ping",
-          "markdownDescription": "Enables the ping command without any pre-configured scope."
+          "const": "allow-create-conversation",
+          "markdownDescription": "Enables the create_conversation command without any pre-configured scope."
         },
         {
-          "description": "Denies the ping command without any pre-configured scope.",
+          "description": "Denies the create_conversation command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-ping",
-          "markdownDescription": "Denies the ping command without any pre-configured scope."
+          "const": "deny-create-conversation",
+          "markdownDescription": "Denies the create_conversation command without any pre-configured scope."
         },
         {
-          "description": "Default permissions for the plugin\n#### This default permission set includes:\n\n- `allow-ping`",
+          "description": "Enables the create_conversation_from_history command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-create-conversation-from-history",
+          "markdownDescription": "Enables the create_conversation_from_history command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the create_conversation_from_history command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-create-conversation-from-history",
+          "markdownDescription": "Denies the create_conversation_from_history command without any pre-configured scope."
+        },
+        {
+          "description": "Enables the download_model command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-download-model",
+          "markdownDescription": "Enables the download_model command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the download_model command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-download-model",
+          "markdownDescription": "Denies the download_model command without any pre-configured scope."
+        },
+        {
+          "description": "Enables the export_conversation command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-export-conversation",
+          "markdownDescription": "Enables the export_conversation command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the export_conversation command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-export-conversation",
+          "markdownDescription": "Denies the export_conversation command without any pre-configured scope."
+        },
+        {
+          "description": "Enables the generate command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-generate",
+          "markdownDescription": "Enables the generate command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the generate command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-generate",
+          "markdownDescription": "Denies the generate command without any pre-configured scope."
+        },
+        {
+          "description": "Enables the list_cached_models command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-list-cached-models",
+          "markdownDescription": "Enables the list_cached_models command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the list_cached_models command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-list-cached-models",
+          "markdownDescription": "Denies the list_cached_models command without any pre-configured scope."
+        },
+        {
+          "description": "Enables the load_cached_model command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-load-cached-model",
+          "markdownDescription": "Enables the load_cached_model command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the load_cached_model command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-load-cached-model",
+          "markdownDescription": "Denies the load_cached_model command without any pre-configured scope."
+        },
+        {
+          "description": "Enables the load_model command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-load-model",
+          "markdownDescription": "Enables the load_model command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the load_model command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-load-model",
+          "markdownDescription": "Denies the load_model command without any pre-configured scope."
+        },
+        {
+          "description": "Enables the register_listener command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-register-listener",
+          "markdownDescription": "Enables the register_listener command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the register_listener command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-register-listener",
+          "markdownDescription": "Denies the register_listener command without any pre-configured scope."
+        },
+        {
+          "description": "Enables the remove_cached_model command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-remove-cached-model",
+          "markdownDescription": "Enables the remove_cached_model command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the remove_cached_model command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-remove-cached-model",
+          "markdownDescription": "Denies the remove_cached_model command without any pre-configured scope."
+        },
+        {
+          "description": "Enables the remove_listener command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-remove-listener",
+          "markdownDescription": "Enables the remove_listener command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the remove_listener command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-remove-listener",
+          "markdownDescription": "Denies the remove_listener command without any pre-configured scope."
+        },
+        {
+          "description": "Enables the runtime_info command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-runtime-info",
+          "markdownDescription": "Enables the runtime_info command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the runtime_info command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-runtime-info",
+          "markdownDescription": "Denies the runtime_info command without any pre-configured scope."
+        },
+        {
+          "description": "Enables the stop_generation command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-stop-generation",
+          "markdownDescription": "Enables the stop_generation command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the stop_generation command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-stop-generation",
+          "markdownDescription": "Denies the stop_generation command without any pre-configured scope."
+        },
+        {
+          "description": "Enables the unload_model command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-unload-model",
+          "markdownDescription": "Enables the unload_model command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the unload_model command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-unload-model",
+          "markdownDescription": "Denies the unload_model command without any pre-configured scope."
+        },
+        {
+          "description": "Default permissions for the plugin\n#### This default permission set includes:\n\n- `allow-register-listener`\n- `allow-remove-listener`\n- `allow-download-model`\n- `allow-load-model`\n- `allow-load-cached-model`\n- `allow-list-cached-models`\n- `allow-remove-cached-model`\n- `allow-unload-model`\n- `allow-create-conversation`\n- `allow-create-conversation-from-history`\n- `allow-generate`\n- `allow-stop-generation`\n- `allow-export-conversation`\n- `allow-runtime-info`",
           "type": "string",
           "const": "default",
-          "markdownDescription": "Default permissions for the plugin\n#### This default permission set includes:\n\n- `allow-ping`"
+          "markdownDescription": "Default permissions for the plugin\n#### This default permission set includes:\n\n- `allow-register-listener`\n- `allow-remove-listener`\n- `allow-download-model`\n- `allow-load-model`\n- `allow-load-cached-model`\n- `allow-list-cached-models`\n- `allow-remove-cached-model`\n- `allow-unload-model`\n- `allow-create-conversation`\n- `allow-create-conversation-from-history`\n- `allow-generate`\n- `allow-stop-generation`\n- `allow-export-conversation`\n- `allow-runtime-info`"
         }
       ]
     }
