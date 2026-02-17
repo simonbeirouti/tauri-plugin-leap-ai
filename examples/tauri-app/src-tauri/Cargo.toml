@@ -27,4 +27,4 @@ tauri-plugin-leap-ai = { path = "../../../", features = ["desktop-embedded-llama
 tauri-plugin-leap-ai = { path = "../../../" }
 
 [patch.crates-io]
-swift-rs = { path = "../../../vendor/swift-rs" }
+swift-rs = { path = "../../../vendor/swift-rs-leap" }

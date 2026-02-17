@@ -31,4 +31,4 @@ tauri-plugin = { version = "2.5.3", features = ["build"] }
 tempfile = "3"
 
 [patch.crates-io]
-swift-rs = { path = "vendor/swift-rs" }
+swift-rs = { path = "vendor/swift-rs-leap" }

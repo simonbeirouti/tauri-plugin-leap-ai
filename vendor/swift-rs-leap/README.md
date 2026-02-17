@@ -5,6 +5,35 @@
 
 Call Swift functions from Rust with ease!
 
+## Fork Update (Tauri + LEAP)
+
+This repository vendors a fork of `swift-rs` for `tauri-plugin-leap-ai`.
+
+### Why this fork exists
+
+The upstream crate is solid, but this integration needed additional Apple build/link behavior to make Swift package interop reliable in our Tauri iOS pipeline (simulator + device), especially with Swift packages that pull in `.xcframework` dependencies.
+
+### What changed in this fork
+
+- iOS-aware Swift build invocation:
+  - Uses explicit iOS target triples when compiling Swift packages for iOS.
+  - Passes consistent SDK/target flags through `swiftc`, `cc`, and `cxx` steps.
+- More robust SwiftPM artifact discovery:
+  - Adds recursive output-path discovery instead of relying only on legacy SwiftPM output layout.
+  - Keeps fallback behavior for older layouts.
+- Framework linking improvements:
+  - Emits framework search paths in addition to native library search paths.
+  - Auto-detects `.framework` bundles in build output and links them automatically.
+  - Retains static package linking behavior.
+- Apple toolchain compatibility polish:
+  - Improves SDK/platform path handling from `xcrun`.
+  - Preserves clang runtime linking required on Apple targets.
+
+### Scope of this fork
+
+- Public API usage remains the same (`swift!`, `SRString`, `SRArray`, `SRObject`, etc.).
+- Changes are focused on build/link reliability for this codebase's Tauri/iOS requirements.
+
 ## Setup
 
 Add `swift-rs` to your project's `dependencies` and `build-dependencies`:
